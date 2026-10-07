@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Rasel Molla | Portfolio</title>
+    <meta name="description" content="An Android app developer and data science enthusiast.">
+    <meta name="author" content="Md. Rasel Molla">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0E8C7F">
+    <meta property="og:title" content="Md. Rasel Molla | Portfolio">
+    <meta property="og:description" content="An Android app developer and data science enthusiast.">
+    <meta property="og:image" content="https://rasel-ml.github.io/res/images/og.jpg">
+    <meta property="og:url" content="https://rasel-ml.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md. Rasel Molla | Portfolio">
+    <meta name="twitter:description" content="An Android app developer and data science enthusiast.">
+    <meta name="twitter:image" content="https://rasel-ml.github.io/res/images/og.jpg">
+    <link rel="icon" href="res/images/favicon.ico">
+    <link rel="canonical" href="https://rasel-ml.github.io/">
+    <link rel="apple-touch-icon" href="res/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="res/css/styles.css"/>
+    <link rel="stylesheet" href="res/css/icons.css"/>
+    <link rel="preload" href="res/webfonts/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="res/script/script.js" defer></script>
+    <noscript>
+        <style>
+            .rv {
+                opacity: 1;
+                transform: none;
+            }
+            
+            #name::before {
+                content: 'Md. Rasel Molla';
+                animation: fadeUp .9s .55s ease both;
+            }
+            
+            #topbar button, .a-tabs, .cert-tabs, .skill-track {
+                display: none;
+            }
+            
+            .info-cards {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .tab-label {
+                display: block;
+            }
+        </style>
+    </noscript>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md. Rasel Molla",
+      "url": "https://rasel-ml.github.io/",
+      "image": "https://rasel-ml.github.io/res/images/og.jpg",
+      "jobTitle": "Android & Data Science Developer",
+      "alumniOf": "University of Barishal",
+      "nationality": "Bangladeshi",
+      "email": "mailto:mrasel21.glm@bu.ac.bd",
+      "sameAs": [
+        "https://github.com/rasel-ml",
+        "https://www.linkedin.com/in/rasel-ml/"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- TOPBAR -->
+    <div id="topbar">
+        <span id="greeting">Welcome !!</span>
+        <button onclick="toggleDrawer()" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <!-- DRAWER -->
+    <div id="drawer">
+        <div class="drawer-bg" onclick="toggleDrawer()"></div>
+        <div class="drawer-panel">
+            <button class="drawer-close" onclick="toggleDrawer()" aria-label="Close menu"><i class="fas fa-times"></i></button>
+            <a href="#myself" class="nav-link" onclick="toggleDrawer()"><i class="fas fa-house"></i><span>Home</span><span class="nav-bar"></span></a>
+            <a href="#about" class="nav-link" onclick="toggleDrawer()"><i class="fas fa-user"></i><span>About</span><span class="nav-bar"></span></a>
+            <a href="#skills" class="nav-link" onclick="toggleDrawer()"><i class="fas fa-layer-group"></i><span>Skills</span><span class="nav-bar"></span></a>
+            <a href="#projects" class="nav-link" onclick="toggleDrawer()"><i class="fa-solid fa-diagram-project"></i><span>Projects</span><span class="nav-bar"></span></a>
+            <a href="#certifications" class="nav-link" onclick="toggleDrawer()"><i class="fa-solid fa-award"></i><span>Certifications</span><span class="nav-bar"></span></a>
+            <a href="#contact" class="nav-link" onclick="toggleDrawer()"><i class="fas fa-paper-plane"></i><span>Contact</span><span class="nav-bar"></span></a>
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sb-progress" id="sbProg"></div>
+        <div class="sb-top">
+            <div class="sb-avatar-ring">
+                <img src="res/images/self.webp" class="sb-avatar" alt="" onerror="this.parentElement.style.display='none'">
+                <span class="sb-dot"></span>
+            </div>
+            <div class="sb-name">Md. Rasel Molla</div>
+            <div class="sb-role">Developer · Learner · Explorer</div>
+        </div>
+        <nav>
+            <span>Navigation</span>
+            <a href="#myself" class="nav-link active"><i class="fas fa-house"></i><span>Home</span><span class="nav-bar"></span></a>
+            <a href="#about" class="nav-link"><i class="fas fa-user"></i><span>About</span><span class="nav-bar"></span></a>
+            <a href="#skills" class="nav-link"><i class="fas fa-layer-group"></i><span>Skills</span><span class="nav-bar"></span></a>
+            <a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i><span>Projects</span><span class="nav-bar"></span></a>
+            <a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i><span>Certifications</span><span class="nav-bar"></span></a>
+            <a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i><span>Contact</span><span class="nav-bar"></span></a>
+        </nav>
+        <div class="sb-bottom">
+            <div class="sb-quote"><span style="color:CornflowerBlue;">if</span>(<span style="color:Coral;">sad</span>() === <span style="color:DarkViolet;">true</span>){<br><span style="color:Coral;">&emsp;&emsp;sad</span>().<span style="color:Coral;">stop</span>();<br><span style="color:Coral;">&emsp;&emsp;beAwesome</span>();<br>}</div>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+        <!-- MYSELF -->
+        <section id="myself">
+            <div class="topo-grid"></div>
+            <div class="inner-grid">
+                <div class="portrait-m">
+                    <div class="portrait-mf1"></div>
+                    <div class="portrait-mf2"></div>
+                    <img src="res/images/self.webp" alt="" onerror="this.parentElement.style.display='none'">
+                </div>
+                <div>
+                    <h1 id="name"></h1>
+                    <div class="divider"></div>
+                    <p class="desc">I'm a developer and data science enthusiast who enjoys exploring how software, data and digital tools work beneath the surface. I'm especially interested in app development, Python, data science and open-source software, and I learn best by building.</p>
+                    <p class="desc2">I believe the best way to learn technology is to stay curious, experiment and build things that are genuinely useful. I like understanding not just how something works, but why. I'm always looking for ways to turn that curiosity into something practical, open and shareable.</p>
+
+                    <div class="stats">
+                        <div>
+                            <a href="#projects">
+                                <div class="stat-n" data-target="3">3+</div>
+                            </a>
+                            <div class="stat-l">Projects</div>
+                        </div>
+                        <div>
+                            <a href="#certifications">
+                                <div class="stat-n" data-target="6">6+</div>
+                            </a>
+                            <div class="stat-l">Certifications</div>
+                        </div>
+                    </div>
+
+                    <div class="contacts">
+                        <a href="mailto:mrasel21.glm@bu.ac.bd" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/rasel-ml" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rasel-ml" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/me.mrm" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/me_mrm" title="Telegram"><i class="fa-regular fa-paper-plane"></i></a>
+                        <a href="https://fb.me/me.mrm" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/qq_mrm" target="_blank" rel="noopener" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="portrait-d">
+                    <div class="portrait-df1"></div>
+                    <div class="portrait-df2"></div>
+                    <img src="res/images/self.webp" alt="" onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="sec-head rv">
+                <div class="sec-label">01</div>
+                <h2 class="sec-title">Who <em>I am</em></h2>
+                <p class="sec-sub">A little about my background, education and where I'm from.</p>
+            </div>
+            <div class="a-tabs">
+                <button class="a-tab active" onclick="switchaTab(this,'personal')">Personal Info</button>
+                <button class="a-tab" onclick="switchaTab(this,'education')">Education</button>
+                <button class="a-tab" onclick="switchaTab(this,'others')">Others</button>
+            </div>
+            <div class="tab-label">Personal Information</div>
+            <div id="personal" class="info-cards active">
+                <div class="info-label">Basic Info</div>
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i style="color:HotPink;" class="fa-solid fa-cake-candles"></i></div>
+                    <div>
+                        <div class="info-lbl">Date of Birth</div>
+                        <div class="info-val">28 September</div>
+                    </div>
+                </div>
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i style="color:SeaGreen;" class="fa-solid fa-star-and-crescent"></i></div>
+                    <div>
+                        <div class="info-lbl">Religion</div>
+                        <div class="info-val">Islam</div>
+                    </div>
+                </div>
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i style="color:purple;" class="fa-solid fa-mars"></i></div>
+                    <div>
+                        <div class="info-lbl">Gender</div>
+                        <div class="info-val">Male</div>
+                    </div>
+                </div>
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i style="color:LightCoral;" class="fa-solid fa-heart"></i></div>
+                    <div>
+                        <div class="info-lbl">Marital Status</div>
+                        <div class="info-val">Single</div>
+                    </div>
+                </div>
+                <div class="info-card rv d5">
+                    <div class="info-icon"><i style="color:Crimson;" class="fa-solid fa-droplet"></i></div>
+                    <div>
+                        <div class="info-lbl">Blood Group</div>
+                        <div class="info-val">A+</div>
+                    </div>
+                </div>
+                <div class="info-card rv d6">
+                    <div class="info-icon"><i style="color:SlateBlue;" class="fa-solid fa-globe"></i></div>
+                    <div>
+                        <div class="info-lbl">Nationality</div>
+                        <div class="info-val">Bangladeshi</div>
+                    </div>
+                </div>
+                <div class="info-label">Present Address</div>
+
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i class="fa-solid fa-signs-post"></i></div>
+                    <div>
+                        <div class="info-lbl">Post Office</div>
+                        <div class="info-val">Barishal Sadar</div>
+                    </div>
+                </div>
+
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i class="fa-solid fa-envelopes-bulk"></i></div>
+                    <div>
+                        <div class="info-lbl">Post Code</div>
+                        <div class="info-val">8200</div>
+                    </div>
+                </div>
+
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <div class="info-lbl">Division</div>
+                        <div class="info-val">Barishal</div>
+                    </div>
+                </div>
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div>
+                        <div class="info-lbl">Country</div>
+                        <div class="info-val">Bangladesh</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-label">Education</div>
+            <div id="education" class="info-cards">
+
+                <div class="info-label">SSC</div>
+
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i class="fa-solid fa-people-roof"></i></div>
+                    <div>
+                        <div class="info-lbl">Group</div>
+                        <div class="info-val">Science</div>
+                    </div>
+                </div>
+
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <div class="info-lbl">Result</div>
+                        <div class="info-val">GPA 5.00</div>
+                    </div>
+                </div>
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div>
+                        <div class="info-lbl">Passing Year</div>
+                        <div class="info-val">2018</div>
+                    </div>
+                </div>
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i class="fa-solid fa-school-flag"></i></div>
+                    <div>
+                        <div class="info-lbl">School Name</div>
+                        <div class="info-val">Bhitabaria Model Secondary School</div>
+                    </div>
+                </div>
+
+                <div class="info-label">HSC</div>
+
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i class="fa-solid fa-people-roof"></i></div>
+                    <div>
+                        <div class="info-lbl">Group</div>
+                        <div class="info-val">Science</div>
+                    </div>
+                </div>
+
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <div class="info-lbl">Result</div>
+                        <div class="info-val">GPA 5.00</div>
+                    </div>
+                </div>
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div>
+                        <div class="info-lbl">Passing Year</div>
+                        <div class="info-val">2020</div>
+                    </div>
+                </div>
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div>
+                        <div class="info-lbl">College Name</div>
+                        <div class="info-val">Bangladesh Navy College, Dhaka</div>
+                    </div>
+                </div>
+
+                <div class="info-label">Graduation</div>
+
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <div class="info-lbl">Degree</div>
+                        <div class="info-val">BSc (Honours)</div>
+                    </div>
+                </div>
+                
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div>
+                        <div class="info-lbl">Major Subject</div>
+                        <div class="info-val">Geology and Mining</div>
+                    </div>
+                </div>
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i class="fa-solid fa-business-time"></i></div>
+                    <div>
+                        <div class="info-lbl">Course Duration</div>
+                        <div class="info-val">4 Years</div>
+                    </div>
+                </div>
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div>
+                        <div class="info-lbl">Passing Year</div>
+                        <div class="info-val">2024</div>
+                    </div>
+                </div>
+                <div class="info-card rv d5">
+                    <div class="info-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div>
+                        <div class="info-lbl">Institution</div>
+                        <div class="info-val">University of Barishal</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-label">Others</div>
+            <div id="others" class="info-cards">
+                <div class="info-label">Language</div>
+                <div class="info-card rv d1">
+                    <div class="info-icon"><b>অ</b></div>
+                    <div>
+                        <div class="info-val">Bangla (বাংলা)</div>
+                        <div class="info-des">Native proficiency</div>
+                    </div>
+                </div>
+                <div class="info-card rv d2">
+                    <div class="info-icon"><b>A</b></div>
+                    <div>
+                        <div class="info-val">English</div>
+                        <div class="info-des">Professional working proficiency</div>
+                    </div>
+                </div>
+                <div class="info-label">Likes &amp; Hobbies</div>
+                <div class="info-card rv d1">
+                    <div class="info-icon"><i class="fa-solid fa-route"></i></div>
+                    <div>
+                        <div class="info-val">Traveling</div>
+                        <div class="info-des">Exploring new places brings me a sense of inner peace.</div>
+                    </div>
+                </div>
+                <div class="info-card rv d2">
+                    <div class="info-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div>
+                        <div class="info-val">Gardening</div>
+                        <div class="info-des">Enjoy gardening and nurturing plants.</div>
+                    </div>
+                </div>
+                
+                <div class="info-card rv d3">
+                    <div class="info-icon"><i class="fas fa-code"></i></div>
+                    <div>
+                        <div class="info-val">Programming</div>
+                        <div class="info-des">Love programming, solving problems, and turning ideas into useful things.</div>
+                    </div>
+                </div>
+
+                <div class="info-card rv d4">
+                    <div class="info-icon"><i class="fa-regular fa-camera"></i></div>
+                    <div>
+                        <div class="info-val">Mobile Photography</div>
+                        <div class="info-des">Turning moments into lasting memories.</div>
+                        <a href="https://rasel-ml.github.io/mobile-photography" class="info-b">Explore Clicks <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="info-card rv d5">
+                    <div class="info-icon"><i class="fa-solid fa-coins"></i></div>
+                    <div>
+                        <div class="info-val">Numismatics &amp; Notaphily</div>
+                        <div class="info-des">Enjoy collecting coins and banknotes from different countries and eras, discovering the history behind each piece and the stories it carries through time.</div>
+                        <a href="https://en.numista.com/echanges/profil.php?id=381245" class="info-b">View Collection <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="sec-head rv">
+                <div class="sec-label">02</div>
+                <h2 class="sec-title">Skills &amp; <em>Expertise</em></h2>
+                <p class="sec-sub">The languages and tools I use to build, analyze and learn. Always improving, never finished.</p>
+            </div>
+            <div class="skills-grid">
+                <div>
+                    <div class="skills-col-h rv d1">Core Skills</div>
+                    <div class="skill-item rv">
+                        <div class="skill-top"><span class="skill-nm">Python (Pandas, NumPy, Matplotlib, Django)</span><span class="skill-pc">80%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item rv d2">
+                        <div class="skill-top"><span class="skill-nm">Kotlin</span><span class="skill-pc">60%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item rv d3">
+                        <div class="skill-top"><span class="skill-nm">Java</span><span class="skill-pc">50%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="50"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item rv d4">
+                        <div class="skill-top"><span class="skill-nm">HTML5 &amp; CSS3</span><span class="skill-pc">80%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item rv d5">
+                        <div class="skill-top"><span class="skill-nm">ArcGIS</span><span class="skill-pc">60%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item rv d6">
+                        <div class="skill-top"><span class="skill-nm">Office Software</span><span class="skill-pc">80%</span></div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-pct="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="tools-h rv">Tools &amp; Technologies</div>
+                    <div class="tools-wrap rv">
+                        <span class="tool"><i class="fab fa-python"></i>Python</span>
+                        <span class="tool"><i class="fas fa-code"></i>Kotlin</span>
+                        <span class="tool"><i class="fa-brands fa-java"></i>Java</span>
+                        <span class="tool"><i class="fa-brands fa-html5"></i>HTML</span>
+                        <span class="tool"><i class="fa-brands fa-css"></i>CSS</span>
+                        <span class="tool"><i class="fa-solid fa-terminal"></i>Termux</span>
+                        <span class="tool"><i class="fab fa-github"></i>Git</span>
+                        <span class="tool"><i class="fa-solid fa-earth-asia"></i>ArcGIS</span>
+                        <span class="tool"><i class="fa-solid fa-file-lines"></i>MS Office</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="sec-head rv">
+                <div class="sec-label">03</div>
+                <h2 class="sec-title">My <em>Projects</em></h2>
+                <p class="sec-sub">Things I've built out of curiosity while learning, experimenting and solving problems. I like keeping them open source, so others can pick them up and take them further.</p>
+            </div>
+            <div class="proj-grid">
+
+                <div class="proj-card rv d1" onclick="openM('m1')">
+                    <div class="proj-thumb-wrap"><img src="res/images/fontlens.webp" class="proj-thumb" alt="FontLens app screenshot">
+                        <div class="proj-overlay"></div><span class="proj-bdg">Software</span>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title">FontLens</div>
+                        <div class="proj-desc">A fully offline Android font viewer and inspector app.</div>
+                        <div class="proj-tags"><span class="proj-tag">Android</span><span class="proj-tag">Kotlin</span></div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="proj-card rv d2" onclick="openM('m2')">
+                    <div class="proj-thumb-wrap"><img src="res/images/metromate.webp" class="proj-thumb" alt="MetroMate app screenshot">
+                        <div class="proj-overlay"></div><span class="proj-bdg">Software</span>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title">MetroMate</div>
+                        <div class="proj-desc">A convenient Android app for checking your Dhaka MRT Card balance on the go.</div>
+                        <div class="proj-tags"><span class="proj-tag">Android</span><span class="proj-tag">Kotlin</span></div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="proj-card rv d3" onclick="openM('m3')">
+                    <div class="proj-thumb-wrap"><img src="res/images/weather.webp" class="proj-thumb" alt="MetroMate app screenshot">
+                        <div class="proj-overlay"></div><span class="proj-bdg">WebApp</span>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-title">Weather Prediction and Analysis Web App</div>
+                        <div class="proj-desc">A Django-based Python project for data science on weather prediction, analysis, and visualization using machine learning.</div>
+                        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Django</span></div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications">
+            <div class="sec-head rv">
+                <div class="sec-label">04</div>
+                <h2 class="sec-title">Courses &amp; <em>Certifications</em></h2>
+                <p class="sec-sub">Courses I've completed to deepen my skills across different fields and tools.</p>
+            </div>
+
+            <div class="cert-tabs">
+                <button class="c-tab active" onclick="switchTab(this,'all')">All</button>
+                <button class="c-tab" onclick="switchTab(this,'data')">Data Science</button>
+                <button class="c-tab" onclick="switchTab(this,'prog')">Programming</button>
+                <button class="c-tab" onclick="switchTab(this,'office')">Office</button>
+            </div>
+
+            <div id="all" class="c-panel active">
+                <div class="c-item rv d1">
+                    <div class="c-icon g"><i class="fab fa-python"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Data Science with Python</div>
+                        <div class="c-org">Enhancing Digital Government &amp; Economy Project (EDGE)</div>
+                        <div class="c-desc">80-hour offline training covering Python for data science, data manipulation, visualization, and applied machine learning.</div>
+                        <a href="https://training.edge.gov.bd/storage/certificate/student-training/certificate_68008088478a36.73100346.pdf"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d2">
+                    <div class="c-icon g"><i class="fa-solid fa-chart-area"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Data Science, Machine Learning : Ultimate Course Bootcamp</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Comprehensive training in Data Science and Machine Learning, covering Python, data preprocessing, EDA, feature engineering, model development, evaluation, and deployment.</div>
+                        <a href="https://www.udemy.com/certificate/UC-c6fcc7fb-8507-4d08-a444-2315ee83007d/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d3">
+                    <div class="c-icon r"><i class="fa-solid fa-file-code"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Java &amp; Python Programming Mastery: Learn to Code Like a Pro</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Comprehensive Java and Python training covering programming fundamentals, OOP, data structures, file handling, databases, web development, data analysis, automation, and advanced programming concepts.</div>
+                        <a href="https://www.udemy.com/certificate/UC-b1816453-335a-4842-a882-a595b3678d1c/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d4">
+                    <div class="c-icon r"><i class="fa-brands fa-java"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Java to Develop Programming Skills</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed a comprehensive 27-hour Java programming course covering Java fundamentals, Object-Oriented Programming (OOP), collections, exception handling, file handling, database connectivity, and practical application development.</div>
+                        <a href="https://www.udemy.com/certificate/UC-3d09637b-94bb-4000-86f0-5c819a488328/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d5">
+                    <div class="c-icon gl"><i class="fa-solid fa-file-word"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">MS Word - Microsoft Word Course Beginner to Expert</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed an MS Word course covering essential tools &amp; features from beginner to advanced levels.</div>
+                        <a href="https://ude.my/UC-b6737138-7ce7-46a6-b9c1-67a6288b6e6a"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d6">
+                    <div class="c-icon gl"><i class="fa-solid fa-file-excel"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Microsoft Excel 101 - Excel From Beginners to Advanced</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed MS Excel training from beginner to advanced level. Developed practical skills in data organization, visualization &amp; advanced Excel techniques.</div>
+                        <a href="https://ude.my/UC-58aa8232-56f6-4b9d-aa09-385e442d7a38"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="data" class="c-panel">
+                <div class="c-item rv d1">
+                    <div class="c-icon g"><i class="fab fa-python"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Data Science with Python</div>
+                        <div class="c-org">Enhancing Digital Government &amp; Economy Project (EDGE)</div>
+                        <div class="c-desc">80-hour offline training covering Python for data science, data manipulation, visualization, and applied machine learning.</div>
+                        <a href="https://training.edge.gov.bd/storage/certificate/student-training/certificate_68008088478a36.73100346.pdf"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d2">
+                    <div class="c-icon g"><i class="fa-solid fa-chart-area"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Data Science, Machine Learning : Ultimate Course Bootcamp</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Comprehensive training in Data Science and Machine Learning, covering Python, data preprocessing, EDA, feature engineering, model development, evaluation, and deployment.</div>
+                        <a href="https://www.udemy.com/certificate/UC-c6fcc7fb-8507-4d08-a444-2315ee83007d/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="prog" class="c-panel">
+                <div class="c-item rv d1">
+                    <div class="c-icon r"><i class="fa-solid fa-file-code"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Java &amp; Python Programming Mastery: Learn to Code Like a Pro</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Comprehensive Java and Python training covering programming fundamentals, OOP, data structures, file handling, databases, web development, data analysis, automation, and advanced programming concepts.</div>
+                        <a href="https://www.udemy.com/certificate/UC-b1816453-335a-4842-a882-a595b3678d1c/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d2">
+                    <div class="c-icon r"><i class="fa-brands fa-java"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Java to Develop Programming Skills</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed a comprehensive 27-hour Java programming course covering Java fundamentals, Object-Oriented Programming (OOP), collections, exception handling, file handling, database connectivity, and practical application development.</div>
+                        <a href="https://www.udemy.com/certificate/UC-3d09637b-94bb-4000-86f0-5c819a488328/"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="office" class="c-panel">
+                <div class="c-item rv d1">
+                    <div class="c-icon gl"><i class="fa-solid fa-file-word"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">MS Word - Microsoft Word Course Beginner to Expert</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed an MS Word course covering essential tools &amp; features from beginner to advanced levels.</div>
+                        <a href="https://ude.my/UC-b6737138-7ce7-46a6-b9c1-67a6288b6e6a"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+                <div class="c-item rv d2">
+                    <div class="c-icon gl"><i class="fa-solid fa-file-excel"></i></div>
+                    <div class="c-body">
+                        <div class="c-name">Microsoft Excel 101 - Excel From Beginners to Advanced</div>
+                        <div class="c-org">Udemy</div>
+                        <div class="c-desc">Completed MS Excel training from beginner to advanced level. Developed practical skills in data organization, visualization &amp; advanced Excel techniques.</div>
+                        <a href="https://ude.my/UC-58aa8232-56f6-4b9d-aa09-385e442d7a38"><button class="c-but">See Credentials   <i class="fa-solid fa-up-right-from-square"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="sec-head rv">
+                <div class="sec-label">05</div>
+                <h2 class="sec-title">Let's <em>Connect</em></h2>
+                <p class="sec-sub">Have a project, question or idea? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="rv">
+                    <div class="c-links">
+                        <a href="https://rasel-ml.github.io/" class="c-link">
+                            <div class="c-link-icon"><i class="fa-solid fa-link"></i></div>
+                            <div>
+                                <div class="c-link-lbl">Website</div>
+                                <div class="c-link-val">rasel-ml.github.io/</div>
+                            </div>
+                        </a>
+                        <div class="c-link">
+                            <div class="c-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-link-text">
+                                <div class="c-link-lbl">Email</div>
+                                <a class="c-link-val" href="mailto:mrasel21.glm@bu.ac.bd">mrasel21.glm@bu.ac.bd</a>
+                                <a class="c-link-val" href="mailto:msg4mrm@gmail.com">msg4mrm@gmail.com</a>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/me.mrm" class="c-link">
+                            <div class="c-link-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div>
+                                <div class="c-link-lbl">WhatsApp</div>
+                                <div class="c-link-val">wa.me/me.mrm</div>
+                            </div>
+                        </a>
+                        <a href="https://fb.me/me.mrm" class="c-link">
+                            <div class="c-link-icon"><i class="fa-brands fa-facebook"></i></div>
+                            <div>
+                                <div class="c-link-lbl">Facebook</div>
+                                <div class="c-link-val">fb.me/me.mrm</div>
+                            </div>
+                        </a>
+                        <a href="https://x.com/qq_mrm" class="c-link">
+                            <div class="c-link-icon"><i class="fa-brands fa-x-twitter"></i></div>
+                            <div>
+                                <div class="c-link-lbl">X</div>
+                                <div class="c-link-val">x.com/qq_mrm</div>
+                            </div>
+                        </a>
+                        <a href="https://t.me/me_mrm" class="c-link">
+                            <div class="c-link-icon"><i class="fa-regular fa-paper-plane"></i></div>
+                            <div>
+                                <div class="c-link-lbl">Telegram</div>
+                                <div class="c-link-val">t.me/me_mrm</div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rasel-ml/" target="_blank" rel="noopener" class="c-link">
+                            <div class="c-link-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <div class="c-link-lbl">LinkedIn</div>
+                                <div class="c-link-val">linkedin.com/in/rasel-ml</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/rasel-ml" target="_blank" rel="noopener" class="c-link">
+                            <div class="c-link-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <div class="c-link-lbl">GitHub</div>
+                                <div class="c-link-val">github.com/rasel-ml</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODALS -->
+    <div class="modal-bg" id="m1" onclick="closeM(event,'m1')">
+        <div class="modal-box">
+
+            <div class="m-imgwrap">
+                <img src="res/images/fontlens.webp" class="m-img" alt="FontLens app screenshot">
+
+                <button class="m-close" onclick="closeModal('m1')" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="m-body">
+                <div class="m-bdg">Android · Software · Kotlin</div>
+                <div class="m-title">FontLens</div>
+                <p class="m-txt">A fully offline Android font viewer and inspector app.</p>
+                <div class="m-txt"><strong>Features:</strong></div>
+                <ul class="m-list">
+                    <li>Works completely offline and needs no permissions.</li>
+                    <li>Browse &amp; preview local font files (.ttf, .otf)</li>
+                    <li>Live editable font preview with size, bold, italic controls</li>
+                    <li>Glyph keyboard to display every character in a font</li>
+                    <li>Metadata viewer and editor</li>
+                    <li>Favorites system</li>
+                    <li>Support for multiple sample texts with configurable priority</li>
+                </ul>
+                <div class="m-meta m-flex">
+                    <a class="p-tab" href="https://github.com/rasel-ml/FontLens/releases/"><strong>Get Apk</strong></a>
+                    <a class="p-tab" href="https://github.com/rasel-ml/FontLens"><strong>Visit Repo</strong></a>
+                    <a class="p-tab" href="https://rasel-ml.github.io/FontLens"><strong>Website</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg" id="m2" onclick="closeM(event,'m2')">
+        <div class="modal-box">
+            <div class="m-imgwrap">
+                <img src="res/images/metromate.webp" class="m-img" alt="MetroMate app screenshot">
+
+                <button class="m-close" onclick="closeModal('m2')" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="m-body">
+                <div class="m-bdg">Android · Software · Kotlin</div>
+                <div class="m-title">MetroMate</div>
+                <p class="m-txt">A convenient Android app for checking your Dhaka MRT Card balance on the go.</p>
+                <div class="m-txt"><strong>Features:</strong></div>
+                <ul class="m-list">
+                    <li>Works completely offline.</li>
+                    <li>Check your balance with just one tap.</li>
+                    <li>Works with both MRT Pass and Rapid Pass.</li>
+                    <li>View transaction history.</li>
+                    <li>Travel fare calculator.</li>
+                </ul>
+                <div class="m-meta m-flex">
+                    <a class="p-tab" href="https://github.com/rasel-ml/MetroMate/releases/"><strong>Get Apk</strong></a>
+                    <a class="p-tab" href="https://github.com/rasel-ml/MetroMate"><strong>Visit Repo</strong></a>
+                    <a class="p-tab" href="https://rasel-ml.github.io/MetroMate"><strong>Website</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-bg" id="m3" onclick="closeM(event,'m3')">
+        <div class="modal-box">
+            <div class="m-imgwrap">
+                <img src="res/images/weather.webp" class="m-img" alt="Weather app screenshot">
+
+                <button class="m-close" onclick="closeModal('m3')" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="m-body">
+                <div class="m-bdg">Python · Django · Notebook</div>
+                <div class="m-title">Weather Prediction and Analysis Web App</div>
+                <p class="m-txt">A Django-based Python project for data science on weather prediction, analysis, and visualization using machine learning.</p>
+                <div class="m-txt"><strong>Features:</strong></div>
+                <ul class="m-list">
+                    <li>Weather Prediction</li>
+                    <li>Weather Visualization</li>
+                    <li>Weather Analysis</li>
+                </ul>
+                <div class="m-meta m-flex">
+                    <a class="p-tab" href="https://github.com/rasel-ml/EDGE-DataScience-Project"><strong>Visit Repo</strong></a>
+                    <a class="p-tab" href="https://rasel-ml.github.io/EDGE-DataScience-Project"><strong>Visit WebApp</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
